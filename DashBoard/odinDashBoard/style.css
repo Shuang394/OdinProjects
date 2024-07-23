@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+.sidebar{
+    background-color: rgb(88, 186, 224);
+    margin: 0px;
+    grid-area: 1 / 1 / 4/ 2;
+
+}
+
+.root{
+    margin: 0px;
+    background-color: grey;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.header{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: white;
+    box-shadow: 0px 2px rgb(223, 221, 221);
+    z-index: 1;
+}
+
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.main{
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: rgb(210, 207, 207);
+}
+
+.dashboard{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bolder;
+}
+
+.nav1 > div > p, .nav2 > div > p{
+    font-size: minmax(1rem, 2rem);
+    color: white;
+    font-weight: bolder;
+}
+
+.nav2{
+    margin-top: 3rem;
+}
+
+.nav1 > div > img, .nav2 > div > img{
+    width: 2rem;
+    height: 2rem
+}
+
+.nav1 > div, .nav2 > div{
+    display:flex;
+    align-items: center;
+    margin-left: 1rem;
+    gap: 1rem;
+}
+.dashboard{
+    display:flex;
+    align-items: center;
+    margin-left: 1rem;
+    gap: 1rem;
+}
+
+.dashboard > img{
+    width: 3rem;
+    height: 3rem;
+}
+
+/* --------------------------------------------------------- header */
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr, 1fr 1fr;
+    grid-template-rows: 1fr, 1fr;
+}
+
+.searchbar > img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.searchbar{
+    display: flex;
+    grid-area: 1 / 1 / 2 / 3;
+    padding: 1rem;
+    gap: 1rem;
+    margin-left: 2rem;
+    align-items: center;
+}
+
+#search{
+    width: 30rem;
+    background-color: rgb(207, 204, 204);
+    border-radius: 1rem;
+    border-color: white;
+}
+
+
+
+.profile{
+    display: flex;
+    grid-area: 1 / 3 / 2 / 4;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.pfp{
+    height: 2rem;
+    width: 2rem;
+}
+
+.bell{
+    height: 2rem;
+    width: 2rem;
+}
+
+.greeting{
+    display:flex;
+    grid-area: 2 / 1 / 3 / 3;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+.greeting > img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.greeting > div > p {
+    font-weight: bolder;
+    margin: 5px
+}
+.name{ 
+    font-size: 1.5rem;
+    margin: 0
+}
+.buttons{
+    display: flex;
+    grid-area: 2 / 3 / 3 / 4;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.buttons > button{
+    height: 50%;
+    padding-bottom: 0px;
+    background-color: rgb(79, 185, 247);
+    color: white;
+    flex: 1 1 auto;
+    border-radius: 1.5rem;
+    border-color: white;
+    margin: 1rem;
+}
