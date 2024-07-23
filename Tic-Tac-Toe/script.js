@@ -12,21 +12,24 @@ function createBoard(){
     board.forEach((item) => {
         item.setAttribute('player', 'none');
         item.addEventListener('click', () =>{
+            item.setAttribute('player', game.current);
             item.innerText = game.current;
             if (game.current = "X" && game.current != ''){
                 game.current = "O";
             }
-            else if (game.current != ''){
+            else if (game.current != "O" && game.current == ""){
                 game.current = "X";
             }
             else{game.current = ''};
 
-            
+
         })
     })
 
     return board;
 }
+
+createBoard();
 
 //global scope var 1
 const choice = document.querySelectorAll(".choice");
@@ -94,7 +97,12 @@ function gameOver(board, index){
     return false;
 }
 
+const victoryModal = document.querySelector("[victory-screen]");
+const closeButton = document.querySelector("[victory-close]");
 function victory(){
-    
+    victoryModal.showModal();
+    closeButton.addEventListener('click', () => {
+        victoryModal.close();
+    })
 }
 

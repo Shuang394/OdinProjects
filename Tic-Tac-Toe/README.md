@@ -8,3 +8,28 @@ You’re going to store the gameboard as an array inside of a Gameboard object, 
 
 Challenges I am expected to see: 
 1. Avoid using global variables and practice applying the principles of OOP
+
+
+# Mistakes I made
+
+1. Adding event listeners to a a group of elements
+
+I made the mistake of adding event listener to the global window object, rather than the individual object.
+
+```javascript
+const choice = document.querySelectorAll(".choice");
+choice.forEach((item) => addEventListener('click', () => {....
+```
+
+the above adds a listener that triggers all the choice buttons when any of them are clicked!
+
+Instead, I have to do this:
+
+```javascript
+console.log(choice);
+choice.forEach((item) => {
+    item.addEventListener('click', () => {
+        game.start = item.textContent;
+        game.current = item.textContent;
+        ...
+```
