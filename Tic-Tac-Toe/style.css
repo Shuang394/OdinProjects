@@ -8,7 +8,7 @@
         height: 90vh;
         margin: 1rem;
         border: 0.5rem solid black;
-
+        display:flex;
     }
 
     .game{
@@ -26,4 +26,57 @@
 
     .game > div:hover{
         background-color: blue;
+    }
+
+    /* ------------------------------------------------------------------- */
+    .info{
+        display: flex;
+        flex-direction: column;
+        width: clamp(50%, 40%, 30%);
+        height: 100%;
+    }
+
+    .name_div{
+        text-align: center;
+    }
+
+    .name{
+        font-family: sans-serif;
+        font-weight: bolder;
+        font-size: 2rem;
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+    }
+
+    .bottom > p{
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        font-weight: bolder;
+        width: 100%;
+        text-align: center;
+    }
+
+    .buttons{
+        width: 100%;
+        display:flex;
+        justify-content: space-between;
+    }
+    .buttons > button{
+        width: clamp(20%, 300px, 40%);
+        height: auto;
+        text-align: center;
+
+    }
+
+    .O:hover{
+        background-color: hsl(240, 100% , 50%, 0.5);
+    }
+
+    .X:hover{
+        background-color: hsl(0, 100%, 50%, 0.8);
     }
