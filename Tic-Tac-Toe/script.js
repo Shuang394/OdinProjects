@@ -1,9 +1,9 @@
 //global object to track game state
 function gameState(){
-    return {start: 'none', current: 'none'};
+    return {start: 'none', current: ''};
 }
 
-let gameState = gameState();
+let game = gameState();
 
 //function to create the tiles for the board
 function createBoard(){
@@ -11,6 +11,18 @@ function createBoard(){
 
     board.forEach((item) => {
         item.setAttribute('player', 'none');
+        item.addEventListener('click', () =>{
+            item.innerText = game.current;
+            if (game.current = "X" && game.current != ''){
+                game.current = "O";
+            }
+            else if (game.current != ''){
+                game.current = "X";
+            }
+            else{game.current = ''};
+
+            
+        })
     })
 
     return board;
@@ -19,10 +31,13 @@ function createBoard(){
 //global scope var 1
 const choice = document.querySelectorAll(".choice");
 
-choice.forEach((item) => addEventListener('click', () => {
-    gameState.start = item.textContent;
-    gameState.current = item.textContent;
-}));
+choice.forEach((item) => {item.addEventListener('click', () => {
+    game.start = item.textContent;
+    game.current = item.textContent;
+})});
+
+
+
 
 //function to check if game is over
 function gameOver(board, index){
@@ -77,5 +92,9 @@ function gameOver(board, index){
     }
 
     return false;
+}
+
+function victory(){
+    
 }
 
