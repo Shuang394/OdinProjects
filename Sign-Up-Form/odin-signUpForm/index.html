@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+    <div class = "main">
+        <div class = "leftSideBar">
+            <div class = "leftDiv">
+                <img src = "Images/images (1).jpg" class = "golem">
+                <p class = leftPara>
+                    ShuYang's Project
+                </p>
+            </div>
+        </div>
+
+        <div class = "rightSideBar">
+            <div class = "introText">
+                <p>This is my attempt at the odin project's assignment for a sign up page! I'm utilising the advanced
+                    CSS techniques I've learnt such as background and its 8 different properties, overflow, shadow etc.
+                </p>
+
+                <p class = "try">Try it out!</p>
+            </div>
+
+            <div class = "forms">
+                <div><p class = "head">Lets do this!</p></div>
+                
+                
+                <form action = "Images/" method = "post" class = "forms2">
+                    <div class = "inputs">
+                        <label for = "Fname">First Name:</label>
+                        <input type = "text" id = "Fname">
+                    </div>
+
+                    <div class = "inputs">
+                        <label for = "Lname">Last Name:</label>
+                        <input type = "text" id = "Lname">
+                    </div>
+
+                    <div class = "inputs">
+                        <label for = "email">Email:</label>
+                        <input type = "email" id = "email" required>
+                    </div>
+
+                    <div class = "inputs">
+                        <label for = "phone">Phone Number:</label>
+                        <input type = "number" id = "phone" >
+                    </div>
+
+                    <div class = "inputs">
+                        <label for = "password">Password:</label>
+                        <input type = "password" id = "password" required minlength="8">
+                    </div>
+
+                    <div class = "inputs">
+                        <label for = "Cpassword">Confirm Password:</label>
+                        <input type = "password" id = "Cpassword" required minlength="8">
+                    </div>
+                </form>
+            </div>
+            <button class = "create">Create Account</button>
+            <div class = "log">
+                <p class = "plog">Already have an account? <a href = "https://www.w3schools.com"">Log in!</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
