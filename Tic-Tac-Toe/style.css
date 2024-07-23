@@ -1,0 +1,29 @@
+    body{
+        background-color: skyblue;
+        margin: 0;
+    }
+
+    .root{
+        width: 95vw;
+        height: 90vh;
+        margin: 1rem;
+        border: 0.5rem solid black;
+
+    }
+
+    .game{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        background-color: white;
+        width: clamp(50%, 60%, 70%);
+        height: 100%;
+    }
+
+    .game > div{
+        border: 0.3rem solid black;
+    }
+
+    .game > div:hover{
+        background-color: blue;
+    }
