@@ -10,7 +10,7 @@ Challenges I am expected to see:
 1. Avoid using global variables and practice applying the principles of OOP
 
 
-# Mistakes I made
+# Mistakes I made and Lessons Learnt
 
 1. Adding event listeners to a a group of elements
 
@@ -33,3 +33,5 @@ choice.forEach((item) => {
         game.current = item.textContent;
         ...
 ```
+
+2. The 2nd argument of ".forEach" is the index of the item in the array!
