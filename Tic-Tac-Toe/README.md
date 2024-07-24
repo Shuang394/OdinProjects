@@ -11,6 +11,22 @@ Challenges I am expected to see:
 
 2. Setting up the logic for win conditions and draws for the game
 
+# Final Product:
+
+1. The game starts off with prompting the user to pick who goes first
+![image](https://github.com/user-attachments/assets/a4c90feb-496b-4613-9ca7-13a91bff46cb)
+
+2. The current player's turn is clearly shown on the right panel
+![image](https://github.com/user-attachments/assets/9723d94c-af78-4c74-9272-5a585862ff4c)
+
+3. O wins the game
+
+![image](https://github.com/user-attachments/assets/ac16cb36-f132-400b-8f34-21930914af5b)
+
+4. The game is a draw!
+
+![image](https://github.com/user-attachments/assets/30bdf390-2707-4f41-8ead-4e8b239061eb)
+
 
 # Mistakes I made and Lessons Learnt
 
