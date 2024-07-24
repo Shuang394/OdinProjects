@@ -7,7 +7,7 @@ let game = gameState();
 
 //function to create the tiles for the board
 function createBoard(){
-    let board = document.querySelectorAll(".tile");
+    let board = Array.from(document.querySelectorAll(".tile"));
 
     board.forEach((item, index) => {
         item.setAttribute('player', 'none');
@@ -26,7 +26,13 @@ function createBoard(){
 
             if (gameOver(board, index)){
                 console.log("game is over!");
-                victory();
+                victory(true);
+                reset(board);
+                return;
+            }
+
+            if (board.every(cell => cell.innerText != '')){
+                victory(false);
                 reset(board);
                 return;
             }
@@ -45,6 +51,9 @@ function createBoard(){
         })
     })
 
+    if (board.every(cell => cell.getAttribute('player') !== '')){
+        
+    }
     return board;
 }
 
@@ -111,6 +120,7 @@ function gameOver(board, index){
             if ((board[index].getAttribute('player') == board[index+1].getAttribute('player')) && (board[index+1].getAttribute('player') == board[index + 2].getAttribute('player'))){
                 return true;
             }
+            break;
         case 6:
             if ((board[2].getAttribute('player') == board[4].getAttribute('player')) && (board[4].getAttribute('player') == board[6].getAttribute('player'))){
                 return true;
@@ -119,6 +129,7 @@ function gameOver(board, index){
             if ((board[index].getAttribute('player') == board[index+1].getAttribute('player')) && (board[index+1].getAttribute('player') == board[index + 2].getAttribute('player'))){
                 return true;
             }
+            break;
 
         //check rows for right hand side tiles, which have index 2, 5 and 8
         case 2:
@@ -149,19 +160,26 @@ function gameOver(board, index){
             }
             
     }
-
+    
     return false;
 }
 
 const victoryModal = document.querySelector("[victory-screen]");
 const closeButton = document.querySelector("[victory-close]");
-function victory(){
+function victory(condition){
+    if (condition == true){
     document.querySelector('.winner').innerText = game.current + " Wins!";
     victoryModal.showModal();
     closeButton.addEventListener('click', () => {
         victoryModal.close();
-    })
-}
+    })}
+    else{
+        document.querySelector('.winner').innerText = "It is a draw!";
+        victoryModal.showModal();
+        closeButton.addEventListener('click', () => {
+            victoryModal.close();
+})}   
+    }
 
 //function to start the game
 

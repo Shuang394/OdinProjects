@@ -9,6 +9,8 @@ You’re going to store the gameboard as an array inside of a Gameboard object, 
 Challenges I am expected to see: 
 1. Avoid using global variables and practice applying the principles of OOP
 
+2. Setting up the logic for win conditions and draws for the game
+
 
 # Mistakes I made and Lessons Learnt
 
