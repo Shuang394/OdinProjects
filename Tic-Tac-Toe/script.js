@@ -27,6 +27,7 @@ function createBoard(){
             if (gameOver(board, index)){
                 console.log("game is over!");
                 victory();
+                reset(board);
                 return;
             }
             //if current player is X 
@@ -171,5 +172,10 @@ function startGame(){
 }
 
 //function to reset game
-
+function reset(board){
+    board.forEach((item) => {
+        item.setAttribute('player', '');
+        item.innerText = '';
+    })
+}
 
