@@ -27,14 +27,17 @@ function createBoard(){
             //if current player is X 
             if (game.current == "X" && game.current != ''){
                 game.current = "O";
+                document.querySelector(".turn > p").innerText = game.current + "'s turn!";
             }
             else if (game.current == "O" && game.current != ''){
                 game.current = "X";
+                document.querySelector(".turn > p").innerText = game.current + "'s turn!";
             }
             else{game.current = ''};
 
             if (gameOver(board, index)){
                 console.log("game is over!");
+                victory();
             }
         })
     })
@@ -50,6 +53,7 @@ const choice = document.querySelectorAll(".choice");
 choice.forEach((item) => {item.addEventListener('click', () => {
     game.start = item.textContent;
     game.current = item.textContent;
+    startGame();
 })});
 
 
@@ -154,4 +158,15 @@ function victory(){
         victoryModal.close();
     })
 }
+
+//function to start the game
+
+function startGame(){
+    document.querySelector(".bottom").style.display = 'none';
+    document.querySelector(".turn").style.display = 'flex';
+    document.querySelector(".turn > p").innerText = game.current + "'s turn!";
+}
+
+//function to reset game
+
 

@@ -80,3 +80,8 @@
     .X:hover{
         background-color: hsl(0, 100%, 50%, 0.8);
     }
+
+
+    .turn{
+        display: none;
+    }
