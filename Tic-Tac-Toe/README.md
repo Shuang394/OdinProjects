@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/9a1b3f42-ad8e-4788-876f-30bfa1c3c8e4)# Odin project tic tac toe:
+# Odin project tic tac toe:
 
 Task: 
 1. Set up your project with HTML, CSS and Javascript files and get the Git repo all set up.
