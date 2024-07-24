@@ -26,14 +26,12 @@ function createBoard(){
 
             if (gameOver(board, index)){
                 console.log("game is over!");
-                victory(true);
-                reset(board);
+                victory(true, board);
                 return;
             }
 
             if (board.every(cell => cell.innerText != '')){
-                victory(false);
-                reset(board);
+                victory(false, board);
                 return;
             }
             //if current player is X 
@@ -166,18 +164,21 @@ function gameOver(board, index){
 
 const victoryModal = document.querySelector("[victory-screen]");
 const closeButton = document.querySelector("[victory-close]");
-function victory(condition){
+
+function victory(condition, board){
     if (condition == true){
     document.querySelector('.winner').innerText = game.current + " Wins!";
     victoryModal.showModal();
     closeButton.addEventListener('click', () => {
         victoryModal.close();
+        reset(board);
     })}
     else{
         document.querySelector('.winner').innerText = "It is a draw!";
         victoryModal.showModal();
         closeButton.addEventListener('click', () => {
             victoryModal.close();
+            reset(board);
 })}   
     }
 
