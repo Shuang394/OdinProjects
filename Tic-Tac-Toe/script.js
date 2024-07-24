@@ -24,6 +24,11 @@ function createBoard(){
                 return;
             }
 
+            if (gameOver(board, index)){
+                console.log("game is over!");
+                victory();
+                return;
+            }
             //if current player is X 
             if (game.current == "X" && game.current != ''){
                 game.current = "O";
@@ -35,10 +40,7 @@ function createBoard(){
             }
             else{game.current = ''};
 
-            if (gameOver(board, index)){
-                console.log("game is over!");
-                victory();
-            }
+
         })
     })
 
@@ -153,6 +155,7 @@ function gameOver(board, index){
 const victoryModal = document.querySelector("[victory-screen]");
 const closeButton = document.querySelector("[victory-close]");
 function victory(){
+    document.querySelector('.winner').innerText = game.current + " Wins!";
     victoryModal.showModal();
     closeButton.addEventListener('click', () => {
         victoryModal.close();
